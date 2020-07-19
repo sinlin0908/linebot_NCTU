@@ -19,10 +19,9 @@ function appendDialogueHistory(sheet,displayName,message){
 
 function saveDialogueHistory(sheet,userID,messageConfig){
   var profile = getUserProfile(userID);
-  console.log("profile: "+profile);
   var userID = profile.userId;
-  console.log("userID: "+userID);
   var userName = profile.displayName;
+
   appendDialogueHistory(sheet, userName, messageConfig.user);
   appendDialogueHistory(sheet, LINEBOT_ID, messageConfig.bot);
 }

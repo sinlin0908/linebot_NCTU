@@ -11,7 +11,6 @@ var LINEBOT_ID = "";
 function doPost(e) {
   console.log('info:' + e.postData.contents);
   var dataFromLine = JSON.parse(e.postData.contents);
-  var　sheet　=　SpreadsheetApp.openByUrl(GOOGLE_SHEET_URL).getActiveSheet();
 
   try {
     var events = dataFromLine.events;
@@ -26,6 +25,7 @@ function doPost(e) {
 
     // save dialogue history
     //  if(userID === MAIN_USER_ID){
+    //    var　sheet　=　SpreadsheetApp.openByUrl(GOOGLE_SHEET_URL).getActiveSheet(); // get google sheet
     //    saveDialogueHistory(sheet,userID,messageConfig);
     //  }
 
