@@ -17,20 +17,15 @@ function doPost(e) {
 
     if (events == null) {return;}
 
-    for (var i in events) {
-      var event = events[i];
-      var messageConfig = eventHandler(event);
-
-      var userID = event.source.userId;
+    var event = events[i];
+    var messageConfig = eventHandler(event);
+    var userID = event.source.userId;
 
     // save dialogue history
     //  if(userID === MAIN_USER_ID){
     //    var　sheet　=　SpreadsheetApp.openByUrl(GOOGLE_SHEET_URL).getActiveSheet(); // get google sheet
     //    saveDialogueHistory(sheet,userID,messageConfig);
     //  }
-
-    }
-
   } catch(ex) {
    console.log(ex);
   }
