@@ -17,7 +17,7 @@ function doPost(e) {
 
     if (events == null) {return;}
 
-    var event = events[i];
+    var event = events[0];
     var messageConfig = eventHandler(event);
     var userID = event.source.userId;
 
